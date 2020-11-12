@@ -1,0 +1,21 @@
+<div class="container">
+<h1><%= @cocktail.name %></h1>
+
+</br>
+<ul class="list-group">
+  <% @cocktail.doses.each do |dose| %>
+    <li class="list-group-item">
+      <%= dose.description %>
+      <%= dose.ingredient.name %>
+      <%= link_to "Remove dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
+</br>
+</br>
+<%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+</br>
+
+<%= link_to "Back to list", cocktails_path %>
+
+</div>
