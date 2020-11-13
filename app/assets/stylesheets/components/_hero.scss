@@ -1,0 +1,21 @@
+.hero {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/elle-a-table/fiches-cuisine/tous-les-themes/recettes-de-cocktail/788840-9-fre-FR/Recettes-de-cocktail.jpg");
+background-size: cover;
+height: 100vh;
+width: 100%;
+
+h1 {
+  color: $white;
+  font-size: 4em;
+}
+
+a {
+  color: $white;
+  font-size: 2em;
+}
+
+}
