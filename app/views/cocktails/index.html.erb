@@ -1,14 +1,17 @@
 <div class="container">
-<h1>Cocktails</h1>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-20">
+    <div class="logo">
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Flogo-cocktail-glass-with-umbrella-vector-4185720&psig=AOvVaw2UQDwRqNIkZr0Gt3SUi5KY&ust=1605365313729000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLjY7f3h_-wCFQAAAAAdAAAAABAD" alt="">
+    </div>
+  <small><%= link_to "Add a new cocktail", new_cocktail_path, :class => "card-add-cocktail" %></small>
+  </div>
+<h1 class="text-center m-10">Cocktails</h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to cocktail.name, cocktail_path(cocktail)%>
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to "Add a new cocktail", new_cocktail_path%>
-
+<div class="container">
+  <div class="cards mt-10">
+      <% @cocktails.each do |cocktail| %>
+          <%= link_to cocktail.name, cocktail_path(cocktail), :style => "text-decoration: none", :class => "card-category" %>
+      <% end %>
+  </div>
+</div>
 </div>
